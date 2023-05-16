@@ -18,9 +18,14 @@
     
       const finalSubTotal = updatePrice + newPrice ;
       document.getElementById('subTotal').innerText = finalSubTotal;
+
+      const tax = document.getElementById('tax').innerText;
+      const newTax = parseFloat(tax);
+      const updateTax = newTax + finalSubTotal / 10;
+      document.getElementById('tax').innerText = updateTax;
     
     
-      const finalTotal = updatePrice + newPrice ;
+      const finalTotal = updatePrice + newPrice + updateTax ;
       document.getElementById('Total').innerText = finalTotal;
 })
     //minusCase
@@ -44,9 +49,17 @@
     
        const finalSubTotal = updatePrice + newPrice ;
        document.getElementById('subTotal').innerText = finalSubTotal;
+
+
+       const tax = document.getElementById('tax').innerText;
+      const newTax = parseFloat(tax);
+      const updateTax = newTax + finalSubTotal / 10;
+      document.getElementById('tax').innerText = updateTax;
     
     
-       const finalTotal = updatePrice + newPrice ;
+      const finalTotal = updatePrice + newPrice + updateTax ;
+    
+       ;
        document.getElementById('Total').innerText = finalTotal;
     })
 
@@ -74,9 +87,16 @@
     
       const finalSubTotal = updatePrice + priceNew ;
       document.getElementById('subTotal').innerText = finalSubTotal;
+      
+      const tax = document.getElementById('tax').innerText;
+      const newTax = parseFloat(tax);
+      const updateTax = newTax + finalSubTotal / 10;
+      document.getElementById('tax').innerText = updateTax;
     
     
-      const finalTotal = updatePrice + priceNew ;
+      
+    
+      const finalTotal = updatePrice + priceNew +updateTax ;
       document.getElementById('Total').innerText = finalTotal;
 
     
@@ -98,9 +118,13 @@
 
       const finalSubTotal = updatePrice + priceNew ;
       document.getElementById('subTotal').innerText = finalSubTotal;
+      
+      const tax = document.getElementById('tax').innerText;
+      const newTax = parseFloat(tax);
+      const updateTax = newTax + finalSubTotal / 10;
+      document.getElementById('tax').innerText = updateTax;
     
-    
-      const finalTotal = updatePrice + priceNew ;
+      const finalTotal = updatePrice + priceNew + updateTax ;
       document.getElementById('Total').innerText = finalTotal;
     })
 
@@ -116,6 +140,7 @@
          const removedSubTotal = updatedSubTotal - setPrice ;
         document.getElementById('subTotal').innerText = removedSubTotal;
 
+        
         const Total = document.getElementById('Total').innerText;
          const updatedTotal = parseFloat(Total);
          const removedTotal = updatedTotal - setPrice ;
