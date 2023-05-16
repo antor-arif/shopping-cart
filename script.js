@@ -21,7 +21,7 @@
 
       const tax = document.getElementById('tax').innerText;
       const newTax = parseFloat(tax);
-      const updateTax = newTax + finalSubTotal / 10;
+      const updateTax = Math.round(newTax + finalSubTotal / 10);
       document.getElementById('tax').innerText = updateTax;
     
     
@@ -53,13 +53,13 @@
 
        const tax = document.getElementById('tax').innerText;
       const newTax = parseFloat(tax);
-      const updateTax = newTax + finalSubTotal / 10;
+      const updateTax = Math.round(newTax + finalSubTotal / 10);
       document.getElementById('tax').innerText = updateTax;
     
     
       const finalTotal = updatePrice + newPrice + updateTax ;
     
-       ;
+       
        document.getElementById('Total').innerText = finalTotal;
     })
 
@@ -90,7 +90,7 @@
       
       const tax = document.getElementById('tax').innerText;
       const newTax = parseFloat(tax);
-      const updateTax = newTax + finalSubTotal / 10;
+      const updateTax = Math.round(newTax + finalSubTotal / 10);
       document.getElementById('tax').innerText = updateTax;
     
     
@@ -121,7 +121,7 @@
       
       const tax = document.getElementById('tax').innerText;
       const newTax = parseFloat(tax);
-      const updateTax = newTax + finalSubTotal / 10;
+      const updateTax = Math.round(newTax + finalSubTotal / 10);
       document.getElementById('tax').innerText = updateTax;
     
       const finalTotal = updatePrice + priceNew + updateTax ;
